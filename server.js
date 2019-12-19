@@ -7,6 +7,7 @@ const app = express();
 app.use(express.static(__dirname));
 
 app.get('*', (req, res) => {
+  console.log('Matched wildcard route!');
   res.sendFile(path.resolve(__dirname, 'public/index.html'));
 });
 
